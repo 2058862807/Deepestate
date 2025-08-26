@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estate Planning Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4361ee',
+                        secondary: '#3f37c9',
+                        success: '#4cc9f0',
+                        dark: '#1e1e2c',
+                        light: '#f8f9fa'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-dark text-white">
+            <div class="p-5">
+                <h1 class="text-xl font-bold">EstatePlan</h1>
+                <p class="text-gray-400 text-sm">Secure Estate Planning</p>
+            </div>
+            <nav class="mt-10">
+                <a href="#" class="block py-3 px-5 bg-primary">
+                    <i class="fas fa-home mr-3"></i> Dashboard
+                </a>
+                <a href="#" class="block py-3 px-5 text-gray-300 hover:bg-gray-800">
+                    <i class="fas fa-file-contract mr-3"></i> Documents
+                </a>
+                <a href="#" class="block py-3 px-5 text-gray-300 hover:bg-gray-800">
+                    <i class="fas fa-shield-alt mr-3"></i> Security
+                </a>
+                <a href="#" class="block py-3 px-5 text-gray-300 hover:bg-gray-800">
+                    <i class="fas fa-cube mr-3"></i> Blockchain
+                </a>
+                <a href="#" class="block py-3 px-5 text-gray-300 hover:bg-gray-800">
+                    <i class="fas fa-robot mr-3"></i> AI Assistant
+                </a>
+                <a href="#" class="block py-3 px-5 text-gray-300 hover:bg-gray-800">
+                    <i class="fas fa-cog mr-3"></i> Settings
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <header class="flex justify-between items-center mb-8">
+                <div>
+                    <h1 class="text-2xl font-bold">Welcome back, User</h1>
+                    <p class="text-gray-600">Here's an overview of your estate planning progress.</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="relative mr-4">
+                        <i class="fas fa-bell text-gray-500 text-xl"></i>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-4 h-4 text-xs flex items-center justify-center">3</span>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">U</div>
+                </div>
+            </header>
+
+            <!-- Quick Compliance -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-6 card-hover">
+                <h2 class="text-lg font-semibold mb-4">Quick Compliance:</h2>
+                <p class="text-gray-700 mb-4">All your documents are validated against current regulations...</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-success h-2.5 rounded-full progress-bar" style="width: 85%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-600 mt-2">
+                    <span>85% Complete</span>
+                    <span>CA Compliance</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Documents Started -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h2 class="text-lg font-semibold mb-4">Documents Started</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">Will</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Valid</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">Trust</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">In Progress</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">Power of Attorney</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Not Started</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Backup -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h2 class="text-lg font-semibold mb-4">Data Backup</h2>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-primary flex items-center justify-center mr-3">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Last Backup: Today, 10:30 AM</p>
+                            <p class="text-sm text-gray-600">Encrypted & Secure</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition">
+                        <i class="fas fa-sync mr-2"></i> Backup Now
+                    </button>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h2 class="text-lg font-semibold mb-4">Quick Actions</h2>
+                    <div class="space-y-3">
+                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition flex items-center justify-between px-4">
+                            <span>Continue Will Builder</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="w-full bg-white border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50 transition flex items-center justify-between px-4">
+                            <span>Add Trust Document</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="w-full bg-white border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50 transition flex items-center justify-between px-4">
+                            <span>Update Beneficiaries</span>
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h2 class="text-lg font-semibold mb-4">Recent Activity</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-file-upload text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Document uploaded</p>
+                                <p class="text-sm text-gray-600">Will_v3.pdf</p>
+                                <p class="text-xs text-gray-500">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-edit text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Will updated</p>
+                                <p class="text-sm text-gray-600">Beneficiary information updated</p>
+                                <p class="text-xs text-gray-500">Yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h2 class="text-lg font-semibold mb-4">Notifications</h2>
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-info text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">State Compliance</p>
+                                <p class="text-sm text-gray-700">Your estate plan is validated against California state laws</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockchain Status -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <h2 class="text-lg font-semibold mb-4">Blockchain Status</h2>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center mr-3">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Active</p>
+                            <p class="text-sm text-gray-600">Documents secured with blockchain</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded-lg">
+                        <p class="text-xs font-mono text-gray-700">0x8a3d...c42b</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Sections -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+                <!-- Premium Features -->
+                <div class="bg-gradient-to-r from-primary to-secondary text-white rounded-xl shadow-md p-6 card-hover lg:col-span-1">
+                    <h2 class="text-lg font-semibold mb-4">Premium Features</h2>
+                    <p class="mb-4">Unlock advanced estate planning tools and AI assistance</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i> AI Document Review
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i> Priority Support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i> Multi-State Compliance
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-primary py-2 rounded-lg font-medium hover:bg-gray-100 transition">
+                        Upgrade Now - $60/month
+                    </button>
+                </div>
+
+                <!-- AI Assistant -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover lg:col-span-1">
+                    <h2 class="text-lg font-semibold mb-4">AI Assistant</h2>
+                    <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                        <p class="text-gray-700">Need help with your estate planning? Our AI assistant is here to guide you.</p>
+                    </div>
+                    <div class="flex space-x-2">
+                        <input type="text" placeholder="Ask a question..." class="flex-1 border border-gray-300 rounded-lg px-4 py-2">
+                        <button class="bg-primary text-white rounded-lg px-4 hover:bg-secondary transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Security Status -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover lg:col-span-1">
+                    <h2 class="text-lg font-semibold mb-4">Security Status</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Encryption</p>
+                                <p class="text-sm text-gray-600">AES-256 Encryption Active</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">2FA</p>
+                                <p class="text-sm text-gray-600">Two-Factor Authentication Enabled</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Audit Log</p>
+                                <p class="text-sm text-gray-600">All activity logged</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple animation for progress bars
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
